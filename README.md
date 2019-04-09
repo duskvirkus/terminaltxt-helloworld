@@ -1,2 +1,2 @@
-# picturesque-helloworld-example
-WIP- Example project using picturesque.
+# TerminalTXT Hello World Example
+Hello World Example of [TerminalTXT Library](https://github.com/figraham/terminaltxt).

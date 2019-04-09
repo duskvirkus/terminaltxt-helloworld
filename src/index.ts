@@ -1,4 +1,4 @@
-import * as picturesque from '../../../build/dev/picturesque';
+import * as terminaltxt from '../../../build/dev/terminaltxt';
 
-picturesque.sayHello('World!');
-picturesque.addHello(2, 2);
+terminaltxt.sayHello('World!');
+terminaltxt.addHello(2, 2);

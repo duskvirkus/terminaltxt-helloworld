@@ -117,12 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../build/dev/picturesque.js":[function(require,module,exports) {
+})({"../../../build/dev/terminaltxt.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 (function webpackUniversalModuleDefinition(root, factory) {
-  if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object' && (typeof module === "undefined" ? "undefined" : _typeof(module)) === 'object') module.exports = factory();else if (typeof define === 'function' && define.amd) define([], factory);else if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object') exports["picturesque"] = factory();else root["picturesque"] = factory();
+  if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object' && (typeof module === "undefined" ? "undefined" : _typeof(module)) === 'object') module.exports = factory();else if (typeof define === 'function' && define.amd) define([], factory);else if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object') exports["terminaltxt"] = factory();else root["terminaltxt"] = factory();
 })(window, function () {
   return (
     /******/
@@ -391,7 +391,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function coreHelloTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return sayHello; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return addHello; });\n/* harmony import */ var _math_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../math/math */ \"./math/math.ts\");\n\r\n/**\r\n * Logs hello message to the console.\r\n *\r\n * @param text Will be output after \"Hello \"\r\n */\r\nfunction sayHello(text) {\r\n    console.log(\"Hello dev \" + text);\r\n}\r\n/**\r\n * Adds firstNumber and secondNumber using [[add]] then will output the result\r\n * to console with the form \"Hello (added number)\".\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n */\r\nfunction addHello(firstNumber, secondNumber) {\r\n    sayHello(Object(_math_math__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(firstNumber, secondNumber).toString());\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./core/hello.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return sayHello; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return addHello; });\n/* harmony import */ var _math_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../math/math */ \"./math/math.ts\");\n\r\n/**\r\n * Logs hello message to the console.\r\n *\r\n * @param text Will be output after \"Hello \"\r\n */\r\nfunction sayHello(text) {\r\n    console.log(\"Hello \" + text);\r\n}\r\n/**\r\n * Adds firstNumber and secondNumber using [[add]] then will output the result\r\n * to console with the form \"Hello (added number)\".\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n */\r\nfunction addHello(firstNumber, secondNumber) {\r\n    sayHello(Object(_math_math__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(firstNumber, secondNumber).toString());\r\n}\r\n\n\n//# sourceURL=webpack://terminaltxt/./core/hello.ts?");
         /***/
       },
 
@@ -407,7 +407,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function coreIndexTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./core/hello.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return _hello__WEBPACK_IMPORTED_MODULE_0__[\"sayHello\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return _hello__WEBPACK_IMPORTED_MODULE_0__[\"addHello\"]; });\n\n\r\n\n\n//# sourceURL=webpack://picturesque/./core/index.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./core/hello.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return _hello__WEBPACK_IMPORTED_MODULE_0__[\"sayHello\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return _hello__WEBPACK_IMPORTED_MODULE_0__[\"addHello\"]; });\n\n\r\n\n\n//# sourceURL=webpack://terminaltxt/./core/index.ts?");
         /***/
       },
 
@@ -423,7 +423,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function indexTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _core_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/index */ \"./core/index.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return _core_index__WEBPACK_IMPORTED_MODULE_0__[\"sayHello\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return _core_index__WEBPACK_IMPORTED_MODULE_0__[\"addHello\"]; });\n\n\r\n\n\n//# sourceURL=webpack://picturesque/./index.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _core_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/index */ \"./core/index.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return _core_index__WEBPACK_IMPORTED_MODULE_0__[\"sayHello\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return _core_index__WEBPACK_IMPORTED_MODULE_0__[\"addHello\"]; });\n\n\r\n\n\n//# sourceURL=webpack://terminaltxt/./index.ts?");
         /***/
       },
 
@@ -439,7 +439,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function mathMathTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\n/**\r\n * Simple alias for adding two numbers.\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n * @returns firstNumber added to secondNumber\r\n */\r\nfunction add(firstNumber, secondNumber) {\r\n    return firstNumber + secondNumber;\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./math/math.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\n/**\r\n * Simple alias for adding two numbers.\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n * @returns firstNumber added to secondNumber\r\n */\r\nfunction add(firstNumber, secondNumber) {\r\n    return firstNumber + secondNumber;\r\n}\r\n\n\n//# sourceURL=webpack://terminaltxt/./math/math.ts?");
         /***/
       }
       /******/
@@ -462,11 +462,11 @@ var __importStar = this && this.__importStar || function (mod) {
 
 exports.__esModule = true;
 
-var picturesque = __importStar(require("../../../build/dev/picturesque"));
+var terminaltxt = __importStar(require("../../../build/dev/terminaltxt"));
 
-picturesque.sayHello('World!');
-picturesque.addHello(2, 2);
-},{"../../../build/dev/picturesque":"../../../build/dev/picturesque.js"}],"../../../../../../Users/figraham/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+terminaltxt.sayHello('World!');
+terminaltxt.addHello(2, 2);
+},{"../../../build/dev/terminaltxt":"../../../build/dev/terminaltxt.js"}],"../../../../../../Users/figraham/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -494,7 +494,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52635" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56446" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

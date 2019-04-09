@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../build/dist/picturesque.js":[function(require,module,exports) {
+})({"../../../build/dev/picturesque.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -391,7 +391,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function coreHelloTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return sayHello; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return addHello; });\n/* harmony import */ var _math_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../math/math */ \"./math/math.ts\");\n\r\nfunction sayHello(text) {\r\n    console.log(\"Hello \" + text);\r\n}\r\nfunction addHello(firstNumber, secondNumber) {\r\n    sayHello(Object(_math_math__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(firstNumber, secondNumber).toString());\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./core/hello.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return sayHello; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addHello\", function() { return addHello; });\n/* harmony import */ var _math_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../math/math */ \"./math/math.ts\");\n\r\n/**\r\n * Logs hello message to the console.\r\n *\r\n * @param text Will be output after \"Hello \"\r\n */\r\nfunction sayHello(text) {\r\n    console.log(\"Hello dev \" + text);\r\n}\r\n/**\r\n * Adds firstNumber and secondNumber using [[add]] then will output the result\r\n * to console with the form \"Hello (added number)\".\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n */\r\nfunction addHello(firstNumber, secondNumber) {\r\n    sayHello(Object(_math_math__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(firstNumber, secondNumber).toString());\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./core/hello.ts?");
         /***/
       },
 
@@ -439,7 +439,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       function mathMathTs(module, __webpack_exports__, __webpack_require__) {
         "use strict";
 
-        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\nfunction add(firstNumber, secondNumber) {\r\n    return firstNumber + secondNumber;\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./math/math.ts?");
+        eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\n/**\r\n * Simple alias for adding two numbers.\r\n *\r\n * @param firstNumber\r\n * @param secondNumber\r\n * @returns firstNumber added to secondNumber\r\n */\r\nfunction add(firstNumber, secondNumber) {\r\n    return firstNumber + secondNumber;\r\n}\r\n\n\n//# sourceURL=webpack://picturesque/./math/math.ts?");
         /***/
       }
       /******/
@@ -462,11 +462,11 @@ var __importStar = this && this.__importStar || function (mod) {
 
 exports.__esModule = true;
 
-var picturesque = __importStar(require("../../../build/dist/picturesque"));
+var picturesque = __importStar(require("../../../build/dev/picturesque"));
 
 picturesque.sayHello('World!');
 picturesque.addHello(2, 2);
-},{"../../../build/dist/picturesque":"../../../build/dist/picturesque.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../../build/dev/picturesque":"../../../build/dev/picturesque.js"}],"../../../../../../Users/figraham/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -494,7 +494,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51457" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52635" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -669,5 +669,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
+},{}]},{},["../../../../../../Users/figraham/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
 //# sourceMappingURL=/src.77de5100.js.map

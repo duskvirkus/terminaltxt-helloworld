@@ -117,43 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/terminaltxt/dist/terminaltxt.js":[function(require,module,exports) {
-var define;
-!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.terminaltxt=e():t.terminaltxt=e()}(window,function(){return function(t){var e={};function n(i){if(e[i])return e[i].exports;var r=e[i]={i:i,l:!1,exports:{}};return t[i].call(r.exports,r,r.exports,n),r.l=!0,r.exports}return n.m=t,n.c=e,n.d=function(t,e,i){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:i})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)n.d(i,r,function(e){return t[e]}.bind(null,r));return i},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=0)}([function(t,e,n){"use strict";n.r(e);var i,r=function(){function t(e,n){if(void 0===e&&(e=t.getDefaultCharacterSet()),"string"==typeof e){for(var i=[],r=0;r<e.length;r++){var o=e.charCodeAt(r);-1===i.indexOf(o)&&i.push(o)}this.set=i}else this.set=e;this.unknown=n?"string"==typeof n?n.charCodeAt(0):n:"�".charCodeAt(0)}return t.getDefaultCharacterSet=function(){return[32,9608]},t.prototype.getIndex=function(t){return this.set.indexOf(t.charCodeAt(0))},t.prototype.getValue=function(t){return t>=0&&t<this.set.length?this.set[t]:this.unknown},t.prototype.size=function(){return this.set.length},t.prototype.toString=function(t){return String.fromCharCode(this.getValue(t))},t}(),o=function(){function t(t,e){this.domController=t,this.characterSet=e}return t.prototype.getCharacterSet=function(){return this.characterSet},t}(),h=(i=function(t,e){return(i=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])})(t,e)},function(t,e){function n(){this.constructor=t}i(t,e),t.prototype=null===e?Object.create(e):(n.prototype=e.prototype,new n)}),s=function(t){function e(){return null!==t&&t.apply(this,arguments)||this}return h(e,t),e}(o),c=function(){function t(t,e){this.changed=[],this.data=[],this.width=t,this.height=e,this.initData(),this.initChanged()}return t.prototype.doneChange=function(t){this.changed[t]=!1},t.prototype.getCell=function(t){return this.data[t]},t.prototype.getHeight=function(){return this.height},t.prototype.getWidth=function(){return this.width},t.prototype.hasBeenChanged=function(t){return this.changed[t]},t.prototype.index=function(t,e){return t+e*this.width},t.prototype.numberOfCells=function(){return this.width*this.height},t.prototype.setCell=function(t,e){this.data[e]=t,this.changed[e]=!0},t.prototype.initChanged=function(){this.changed=[];for(var t=0;t<this.width*this.height;t++)this.changed.push(!0)},t.prototype.initData=function(){this.data=[];for(var t=0;t<this.width*this.height;t++)this.data.push(0)},t}(),a=function(){function t(e){void 0===e&&(e=t.defaultContainer()),this.container=e,this.pre=document.createElement("pre"),this.code=document.createElement("code"),this.display=document.createElement("span"),this.idNumber=t.getID(),this.container.appendChild(this.pre),this.pre.appendChild(this.code),this.code.appendChild(this.display),this.setIDs(),this.setClasses()}return t.defaultContainer=function(){var t=document.createElement("div");return document.body.appendChild(t),t},t.getID=function(){var e=t.idCounter;return t.idCounter++,e},t.prototype.clear=function(){this.display.innerHTML=""},t.prototype.setClasses=function(){this.container.classList.add("termtxt-container"),this.pre.classList.add("termtxt-pre"),this.code.classList.add("termtxt-code"),this.display.classList.add("termtxt-display")},t.prototype.setIDs=function(){var t;t=0===this.idNumber?"":"-"+this.idNumber.toString(),this.container.id="termtxt-container"+t,this.pre.id="termtxt-pre"+t,this.code.id="termtxt-code"+t,this.display.id="termtxt-display"+t},t.idCounter=0,t}(),u=function(){var t=function(e,n){return(t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])})(e,n)};return function(e,n){function i(){this.constructor=e}t(e,n),e.prototype=null===n?Object.create(n):(i.prototype=n.prototype,new i)}}(),p=function(t){function e(e,n,i){var r=this;return(r=i?t.call(this,i)||this:t.call(this)||this).width=e,r.height=n,r.cells=[],r.initCells(),r}return u(e,t),e.prototype.index=function(t,e){return t+e*this.width},e.prototype.setCellValue=function(t,e,n){var i;i=n?this.index(e,n):e,this.cells[i].innerHTML=t},e.prototype.initCells=function(){for(var t=0;t<this.height;t++){for(var e=0;e<this.width;e++)this.cells.push(document.createElement("span")),this.display.appendChild(this.cells[this.cells.length-1]),this.cells[this.cells.length-1].id=t+"-"+e;this.display.appendChild(document.createTextNode("\n"))}},e}(a),d=function(){var t=function(e,n){return(t=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])})(e,n)};return function(e,n){function i(){this.constructor=e}t(e,n),e.prototype=null===n?Object.create(n):(i.prototype=n.prototype,new i)}}(),l=function(t){function e(e,n){void 0===e&&(e={}),void 0===n&&(n=new r);var i=this;return e.graphics||(e.graphics={}),e.graphics.width||(e.graphics.width=80),e.graphics.height||(e.graphics.height=25),(i=e.container?t.call(this,new p(e.graphics.width,e.graphics.height,e.container),n)||this:t.call(this,new p(e.graphics.width,e.graphics.height),n)||this).width=e.graphics.width,i.height=e.graphics.height,i.cellData=new c(e.graphics.width,e.graphics.height),i}return d(e,t),e.prototype.getHeight=function(){return this.height},e.prototype.getWidth=function(){return this.width},e.prototype.setCell=function(t,e,n){var i;i="string"==typeof t?this.characterSet.getIndex(t):t>=0&&t<this.characterSet.set.length?t:-1,this.cellData.setCell(i,this.cellData.index(e,n))},e.prototype.update=function(){for(var t=0;t<this.cellData.numberOfCells();t++)this.cellData.hasBeenChanged(t)&&(this.domController.setCellValue(this.characterSet.toString(this.cellData.getCell(t)),t),this.cellData.doneChange(t))},e}(o);n.d(e,"CharacterSet",function(){return r}),n.d(e,"CommandTerminal",function(){return s}),n.d(e,"GraphicsTerminal",function(){return l})}])});
-},{}],"index.ts":[function(require,module,exports) {
-"use strict";
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-exports.__esModule = true;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-var terminaltxt_1 = require("terminaltxt");
-
-if (document.readyState === 'complete') {
-  init();
-} else {
-  window.addEventListener('load', init, false);
+  return bundleURL;
 }
 
-var term;
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-function init() {
-  term = new terminaltxt_1.GraphicsTerminal({
-    container: document.getElementById('container')
-  }, new terminaltxt_1.CharacterSet('Hello World!'));
-  update();
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
 }
 
-function update() {
-  setTimeout(function () {
-    term.update();
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
 
-    for (var i = 0; i < 10; i++) {
-      term.setCell(Math.floor(Math.random() * term.getCharacterSet().size()), Math.floor(Math.random() * term.getWidth()), Math.floor(Math.random() * term.getHeight()));
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
     }
 
-    update();
-  }, 30);
+    cssTimeout = null;
+  }, 50);
 }
-},{"terminaltxt":"../node_modules/terminaltxt/dist/terminaltxt.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -181,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57870" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58376" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -356,5 +392,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
-//# sourceMappingURL=src.77de5100.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.e308ff8e.js.map
